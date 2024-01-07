@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "isBackground": "false"
+            },
+            "dependsOn": [
+                /*
+                "build _index.json & _cam.json",
+                "auto index resources"
+                */
+            ],
+            "dependsOrder": "sequence",
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated",
+                "clear": true,
+                "close": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build _index.json & _cam.json",
+            "type": "shell",
+            "command": "node",
+            "args": [
+                "./strvct/source/boot/index-builder/ImportsIndexer.js"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "_runner": "terminal",
+                "isBackground": "false"
+            },
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated",
+                "clear": true,
+                "close": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

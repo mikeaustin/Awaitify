@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    //
+    // notes:
+    // this seems to be unsupported:
+    // "runtimeArgs": ["--disable-web-security"],
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "launch local file",
+            "file": "${workspaceFolder}/index.html",
+            "webRoot": "${workspaceFolder}",
+            //"runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+            "runtimeExecutable": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+            "runtimeArgs": [
+            ],
+            "enableContentValidation": false,
+            "sourceMaps": true
+        }
+
+    ]
+}
