@@ -1,5 +1,5 @@
-//const acorn = require('acorn');
-//const escodegen = require('escodegen');
+const acorn = require('acorn');
+const escodegen = require('escodegen');
 
 function asyncify(inputCode) {
   const ast = acorn.parse(inputCode, { ecmaVersion: 'latest' });
@@ -133,9 +133,12 @@ class MyClass {
       await this.test(await this.foo());
   }
 }
-await foo();`
+await foo();`;
 
 const modifiedCode = asyncify(inputCode);
+
 if (modifiedCode !== expectedOutputCode) {
   console.log("ERROR: [" + modifiedCode + "]");
 }
+
+window.asyncify = asyncify;
