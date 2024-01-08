@@ -1,6 +1,7 @@
 const { asyncify } = require('./awaitify.js');
 
-const inputCode = `const anonFunc = () => {
+test('adds 1 + 2 to equal 3', () => {
+  const inputCode = `const anonFunc = () => {
   foo();
 };
 
@@ -21,10 +22,10 @@ class MyClass {
     this.test(this.foo());
   }
 }
-  
+
 foo();`;
 
-const expectedOutputCode = `const anonFunc = async () => {
+  const expectedOutputCode = `const anonFunc = async () => {
     await foo();
 };
 async function foo() {
@@ -43,7 +44,6 @@ class MyClass {
 }
 await foo();`;
 
-test('adds 1 + 2 to equal 3', () => {
   const modifiedCode = asyncify(inputCode);
 
   expect(modifiedCode).toBe(expectedOutputCode);
