@@ -9,7 +9,8 @@
     "build": "webpack",
     "start": "npx serve dist",
     "prestart": "npm run build",
-    "test": "jest"
+    "test": "jest src/awaitify.test.js",
+    "test:experimental": "jest src/awaitify.experimental.test.js"
   },
   "devDependencies": {
     "acorn": "^8.11.3",
