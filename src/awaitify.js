@@ -141,4 +141,8 @@ if (modifiedCode !== expectedOutputCode) {
   console.log("ERROR: [" + modifiedCode + "]");
 }
 
-window.asyncify = asyncify;
+module.exports = {
+  asyncify,
+};
+
+globalThis.asyncify = asyncify;
