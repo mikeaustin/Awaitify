@@ -10,7 +10,7 @@
     "start": "npx serve dist",
     "prestart": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "jest src/awaitify.test.js",
     "test:experimental": "jest src/awaitify.experimental.test.js"
   },
