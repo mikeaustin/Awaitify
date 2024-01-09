@@ -9,12 +9,15 @@
     "build": "webpack",
     "start": "npx serve dist",
     "prestart": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "jest src/awaitify.test.js",
     "test:experimental": "jest src/awaitify.experimental.test.js"
   },
   "devDependencies": {
     "acorn": "^8.11.3",
     "escodegen": "^2.1.0",
+    "gh-pages": "^6.1.1",
     "jest": "^29.7.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
