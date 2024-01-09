@@ -13,7 +13,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "launch local file",
-            "file": "${workspaceFolder}/index.html",
+            "file": "${workspaceFolder}/public/index.html",
             "webRoot": "${workspaceFolder}",
             //"runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
             "runtimeExecutable": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
